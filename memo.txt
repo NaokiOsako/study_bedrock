@@ -12,8 +12,17 @@ AWS作のテキスト生成モデル
 入力, 1000トークンで$0.0002
 出力, 1000トークンで$0.0006
 
+## claude-3-haiku
+claude-3のテキスト生成モデルの中の安いやつ
+コストは入力トークンと, 出力トークンで計算できる
+入力, 1000トークンで$0.00025
+出力, 1000トークンで$0.00125
+
 
 # フレームワークを使って
+## Bedrock
+AWSの生成AIサービス
+
 ## LangChain
 生成AIフレームワークのデファクトスタンダード
 LangChainを使うと, GPT-4もGeminiもBedrockも同じような感じで使える
@@ -26,4 +35,4 @@ PythonのWebアプリケーションフレームワーク
 外部データを活用した情報検索とテキスト生成
 
 ## streamlit の実行コマンド
-streamlit run streamlit.py --server.port 8080
+streamlit run hogehoge.py --server.port 8080
