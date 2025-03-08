@@ -1,3 +1,4 @@
+## streamlitで画面作成
 from langchain.globals import set_debug
 from langchain_aws import ChatBedrock
 from langchain_community.chat_message_histories import DynamoDBChatMessageHistory
