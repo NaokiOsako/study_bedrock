@@ -11,7 +11,7 @@ st.title("おおさこが作った chat app")
 
 chat = ChatBedrock(
     credentials_profile_name='osako',    
-    model_id='amazon.titan-text-express-v1',    
+    model_id='anthropic.claude-3-haiku-20240307-v1:0',    
     model_kwargs={
         "max_tokens":1000,
     },

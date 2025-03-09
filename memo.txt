@@ -35,4 +35,5 @@ PythonのWebアプリケーションフレームワーク
 外部データを活用した情報検索とテキスト生成
 
 ## streamlit の実行コマンド
+export AWS_PROFILE=osako
 streamlit run hogehoge.py --server.port 8080
