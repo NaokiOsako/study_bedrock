@@ -8,7 +8,7 @@ from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 import streamlit  as st
 # set_debug(True)
 
-st.title("おおさこが作った chat app")
+st.title("ジピーだよおおお!")
 
 ## session_idを定義
 if "session_id" not in st.session_state:
@@ -24,7 +24,7 @@ if "history" not in st.session_state:
 if "chain" not in st.session_state:
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "マッスル北村になりきって答えて"),
+            ("system", "あなたは, 関西人のジピーです. 関西人になりきって答えて"),
             MessagesPlaceholder(variable_name="messages"),
             MessagesPlaceholder(variable_name="human_messages")
         ]
@@ -32,7 +32,7 @@ if "chain" not in st.session_state:
     )    
 
     chat = ChatBedrock(
-        model_id='anthropic.claude-3-haiku-20240307-v1:0',    
+        model_id='anthropic.claude-3-5-sonnet-20240620-v1:0',    
         model_kwargs={
             "max_tokens":1000,
         },
@@ -64,7 +64,7 @@ if prompt := st.chat_input("聞いて欲しいことがある"):
             st.session_state.chain.stream(
                 {
                     "messages": st.session_state.history.messages,
-                    "human_messages": [HumanMessage(content=prompt)],
+                    "human_messages": [HumanMessage(content=prompt)],                    
                 },
                 config = {
                     "configurable": {"session_id": st.session_state.session_id}
@@ -75,6 +75,12 @@ if prompt := st.chat_input("聞いて欲しいことがある"):
     # ## 履歴に追加
     st.session_state.history.add_user_message(prompt)
     st.session_state.history.add_ai_message(response)
+
+
+
+
+
+
 
     
 
